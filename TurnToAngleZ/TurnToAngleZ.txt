@@ -1,0 +1,5 @@
+This function is designed to allow the robot to face a specific radian based angle.
+
+The function does require either these following functions or ones that perform similarily.
+
+stopMoving();

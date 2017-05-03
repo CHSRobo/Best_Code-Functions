@@ -1,0 +1,6 @@
+This function is designed to allow an omniwheel robot straighten its orientation every movement.
+
+The function does require either these following functions or ones that perform similarily.
+
+stopMoving();
+turnToAngleZ();

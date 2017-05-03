@@ -1,0 +1,7 @@
+This function is designed to allow an omniwheel robot move in any direction based on radians 90=Forwards 180=Right
+270=Backwards 0=Left
+
+The function does require either these following functions or ones that perform similarily.
+
+stopMoving();
+straighten();
