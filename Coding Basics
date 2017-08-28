@@ -1,0 +1,125 @@
+//Examples of basic coding essentials
+
+import //Used to import functions needed such as DCmotors and Gyroscopes
+
+class main(){
+    public static void basics(){
+        
+        //Variables first part ex. bool, int, etc. is the type of variable and the second part is the variable name that can be almost anything and is case sensative
+        boolean tf=true; //Booleans hold a binary value either 1 (true) or 0 (false)
+        
+        int whole=9; //Integers are whole numbers meaning that they can be positive or negative but do not have decimals or fractions, naturally they are real
+        
+        float decimal=5.5; //Floats are the archaic form of doubles that can be any real number, floats are used on the controllers because that is the type of signal they send out
+        
+        double bigDecimal=3.455432346342; //Doubles are more accurate floats and can be any real number
+        
+        //NOTE can also be initialized as
+        // double bigDecimal;
+        // bigDecimal=3.455432346342;
+
+        if(whole==6){//This checks to see if the value of whole (which is 9) is equal to 6, which because it is not, it is false and so does not execute what is in the braces
+            //this is false
+        }else if(whole>=10){//This checks to see if the value of whole (which is 9) is greater than or equal to 10 which, because it is not, it is false and so does not execute what is in the braces
+            //this is false
+        }else if(whole<=6){//This checks to see if the value of whole (which is 9) is less than or equal to 6 which, because it is not, it is false and so does not execute what is in the braces
+            //this is false
+        }else if(whole!=9){//This checks to see if the value of whole (which is 9) is not equal to 9 which, because it is equal to 9, it is false and so does not execute what is in the braces
+            //this is false
+        }else if(whole>9){//This checks to see if the value of whole (which is 9) is greater than 9 which, because it is not, it is false and so does not execute what is in the braces
+            //this is false
+        }else if(whole<10){//This checks to see if the value of whole (which is 9) is less than 10 which, because it is, it is true and so does execute what is in the braces
+            //this is true
+        }else{//This simply states that as long as none of the other statements are true then this will execute what is in the braces
+            //Will occur as long as none of the others occur
+        }
+        
+        if(tf){//Because an if statement simply checks to see if what is in the parenthesis is true if you input true (which tf is true) into the parenthesis then what is in the braces will be executed
+            //This is true
+        }
+        
+        int a=5;
+        int b=2;
+        //A more advanced comparison that can be used in anything if/while/for statements
+        if(a=5 && b=5){//&& means (and) so it is checking if a=5 and b=5 which, because b is not equal to 5, the statement is false
+            //This is false
+        } else if(a=5 || b=5)//|| means (or) so it is checking if a=5 or b=5 which, because a is true even though b is false, the statement is true
+        
+        int loop=0;
+        while(loop < 100){//while loop simply states that while the value is false the loop will occur meaning that if you were to put false in the place of (loop<100) it would occur infinitely
+            //placement of the action matters greatly in a loop, placed here and the action will occur 99 times but if the funtion was changed to <= it would occur 100 times
+            loop+=1; //+=1 means the same as saying loop=loop+1
+            //placement of the action matters greatly in a loop, placed here and the action will occur 100 times but if the function was changed to <= it would occur 101 times
+        }
+        
+        for(int loops=0; loops<100; loops+=1;){// for loops are basically the same as while loops just different formatting (initialize variable; set arguement; set increment;)
+            //This will occur 99 times however because of the same reason as is in the while loop if it were changed (loops<=100;) it would occur 100 times
+        }
+    }
+    
+    public static void math(){
+        int addition=3+7; //This would return 10 because 3+7=10
+        int subtraction=7-3; //This would return 4 because 7-3=4
+        int multiplication=5*3; //This would return 15 because 5*3=15
+        double division=4/3; //This would return 1.33333333 because 4/3=1.33333333
+        double remainder=4/3; //This would return 1 because the remainder of 4/3 is 1 (basically the whole number that is left after you remove what can be equally divided out)
+        double remainder2=7/3; //This would also return 1 because 3 can only go into 7 twice and 7-6=1
+        double remainder3=8/3; //But this would return 2 because 3 can only go into 8 twice and 8-6=2
+        double remainder4=10/3; //This would return 1 because 3 can only go into 10 3 times and 10-9=1
+        double remainder5=9/3; //This would return 0 because 3 goes into 9 without any remainders
+    }
+    
+    public static void complexities(){
+        
+        //Variables - Arrays first you initialize the variable type ex. bool, int, etc and then add [] to make it an array. Then add the variable that can be named anything but is case sensative.
+        //You then have to allocate the size of the array by using = new variabletype[number of variables]
+        boolean[] boolArray;//Creates an array of booleans
+        boolArray = new boolean[3];//Allocates the array size to 3 booleans
+        boolArray[0]=true;//It starts from zero ALWAYS
+        boolArray[1]=false;
+        boolArray[2]=true;//Because of starting from zero the biggest number is always number allocated-1
+        
+        int[] intArray;//Creates an array of integers
+        intArray = new int[3];//Allocates the array size to 3 integers
+        intArray[0]=50;
+        intArray[1]=2;
+        intArray[2]=5231;
+        
+        float[] floatArray;//Creates an array of floats
+        floatArray = new float[3];//Allocates the array size to 3 floats
+        floatArray[0]=4.21;
+        floatArray[1]=50.32;
+        floatArray[2]=.23;
+        
+        double[] doubleArray;//Creates an array of doubles
+        doubleArray = new double[3];//Allocates the array size to 3 doubles
+        doubleArray[0]=432.513;
+        doubleArray[1]=3126.5235;
+        doubleArray[2]=13276.36867;
+        
+        //NOTE can also be configured as double[] doubleArray = new double[3]; just like how the original variables were initialized
+        
+        if(boolArray[0]){
+            //This is true
+        }else if (boolArray[1]){
+            //This is false
+        }else if (boolArray[2]){
+            //This is true
+        }
+        
+        for(int loops=0; loops<=2; loop+=1;){
+            intArray[loops];//Because loops is a number it can be used in place of the variable number, this function would cause the values of intArray[] to be displayed in order (50,2,5231)
+        }
+        
+        int errors=6;
+        double[] totalError = new float[errors];//This will create a double array with a size of 6 (0,1,2,3,4,5)
+        
+        for(int loops=0; loops<=errors; loop+=1;){
+            int currentError; //This could potentially be a function that uses the gyroscope plus the speed traveled to collect the amount of "error" or distance off path
+            totalError[loops]=currentError;//Sets each "second" of error to the totalError
+            netError+=totalError[loops];//Conbines every totalError[] into a cumulative netError
+        }
+        
+        
+    }
+}
